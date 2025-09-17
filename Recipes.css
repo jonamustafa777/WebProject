@@ -55,3 +55,18 @@
   gap: 20px; /* adds spacing between cards */
   padding: 20px;
 }
+
+.card-img-top {
+  height: 180px; /* or whatever fixed height you want */
+  object-fit: cover; /* this crops/zooms the image to fill the space nicely */
+}
+.cuisine-description {
+  border-left: 5px solid #f39c12;  /* vertical colored bar on the left */
+  background-color: #fff8e1;        /* soft light background for the box */
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;               /* rounded corners */
+  font-style: italic;                /* optional: adds elegance */
+  line-height: 1.6;
+  color: #2c3e50;
+}
