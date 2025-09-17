@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Tasty Tales </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Login</a></li>
+        </ul>
+    </nav>
+    <div class="kuzhinaFranceze">
+        <h2>Kuzhina Franceze</h2>
+            <p>
+            Kuzhina franceze është një nga më të njohurat në botë për shijen, elegancën 
+            dhe traditat e saj. Ajo përfshin shumë receta klasike si croissant, 
+            bageta, supa e qepëve dhe shumë ëmbëlsira të famshme.
+            </p>
+                
+         <div class="slider">
+            <img id="slide" src="foto1.jpg" alt="Ushqim Francez">
+            
+            <div class="buttons">
+                <button onclick="prev()">&#10094;</button>
+                <button onclick="next()">&#10095;</button>
+            </div>
+        </div>
+
+    </div>
+   <script>
+  const images = ["foto1.jpg", "foto2.jpg", "foto3.jpg"];
+  let index = 0;
+
+  function showSlide(i) {
+    if (i < 0) index = images.length - 1;
+    else if (i >= images.length) index = 0;
+    else index = i;
+
+    document.getElementById("slide").src = images[index];
+  }
+
+  function prev() { showSlide(index - 1); }
+  function next() { showSlide(index + 1); }
+</script>
+</body>
+</html>
