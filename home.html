@@ -4,51 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+ 
 </head>
 <body>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <nav class="navbar">
         <div class="logo">Tasty Tales </div>
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
+            <li><a href="Recipes.html">Recipes</a></li>
             <li><a href="#">Contact</a></li>
-            <li><a href="#">Login</a></li>
         </ul>
     </nav>
-    <div class="kuzhinaFranceze">
-        <h2>Kuzhina Franceze</h2>
-            <p>
-            Kuzhina franceze është një nga më të njohurat në botë për shijen, elegancën 
-            dhe traditat e saj. Ajo përfshin shumë receta klasike si croissant, 
-            bageta, supa e qepëve dhe shumë ëmbëlsira të famshme.
-            </p>
-                
-         <div class="slider">
-            <img id="slide" src="foto1.jpg" alt="Ushqim Francez">
-            
-            <div class="buttons">
-                <button onclick="prev()">&#10094;</button>
-                <button onclick="next()">&#10095;</button>
-            </div>
-        </div>
 
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/background3.jpg" class="d-block w-100" alt="...">
     </div>
-   <script>
-  const images = ["foto1.jpg", "foto2.jpg", "foto3.jpg"];
-  let index = 0;
+    <div class="carousel-item">
+      <img src="images/background1.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/background2.jpg"class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div class="slogan-container">
+  <h1>Discover the Stories Behind Every Cuisine</h1>
+</div>
 
-  function showSlide(i) {
-    if (i < 0) index = images.length - 1;
-    else if (i >= images.length) index = 0;
-    else index = i;
 
-    document.getElementById("slide").src = images[index];
-  }
+<section class="cuisine-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left side: Text -->
+      <div class="col-md-6 cuisine-text">
+        <h2>French Cuisine</h2>
+        <p>
+          French cuisine is known worldwide for its elegance, tradition, and flavor.
+          From buttery croissants and fresh baguettes to classic onion soup,
+          escargots, and crème brûlée, every dish tells a story of culture and art.
+        </p>
+      </div>
 
-  function prev() { showSlide(index - 1); }
-  function next() { showSlide(index + 1); }
+
+      <div class="col-md-6 cuisine-images">
+        <img src="risotto.png" alt="Croissant" class="img-fluid mb-3">
+        <img src="sallata.png" alt="Baguette" class="img-fluid mb-3">
+        <img src="shpageta.png" alt="Onion Soup" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cuisine-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Images left -->
+      <div class="col-md-6 cuisine-images">
+        <img src="yakitori.png" alt="Pizza">
+        <img src="sukiyaki.png" alt="Pasta">
+        <img src="tonkatsu.png" alt="Gelato">
+      </div>
+      <!-- Text right -->
+      <div class="col-md-6 cuisine-text">
+        <h2>Italian Cuisine</h2>
+        <p>
+          Italian cuisine is famous for its rich flavors and simplicity.
+          Dishes like pizza, pasta, risotto, and gelato bring families together
+          and celebrate the tradition of fresh, local ingredients.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  const myCarousel = document.querySelector('#carouselExampleAutoplaying');
+  const carousel = new bootstrap.Carousel(myCarousel, {
+    interval: 2000,  // 2 seconds
+    ride: 'carousel'
+  });
 </script>
 </body>
 </html>

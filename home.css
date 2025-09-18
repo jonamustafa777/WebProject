@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Georgia', serif;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5b1616;
+  padding: 15px 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.logo {
+  color: white;
+  font-size: 19px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.logo:hover {
+  color: #f39c12;
+  transform: scale(1.2);
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;  
+}
+.nav-links a:hover {
+  color: #f39c12;
+  transform: scale(1.2);
+}
+
+#carouselExampleAutoplaying,
+#carouselExampleAutoplaying .carousel-item img {
+  height: 100vh;
+}
+
+.slogan-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 10; 
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7); 
+  padding: 20px 30px; 
+  background: rgba(0, 0, 0, 0.5); 
+  border-radius: 10px; 
+}
+.cuisine-section {
+  padding: 60px 0;
+  background-color: #f8f8f8; 
+}
+
+.cuisine-text h2 {
+  color: #5b1616;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cuisine-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.cuisine-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* space between images */
+  justify-content: center;
+}
+
+.cuisine-images img {
+  width: 45%; /* each image takes about half the column */
+  max-width: 200px; /* they won’t get too big */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
