@@ -3,21 +3,31 @@
   padding: 0;
   box-sizing: border-box;
 }
- 
+ body {
+  background-color: #f9f6f0; /* dark chocolate brown */
+  color: #c97d43; /* soft beige text for readability */
+  font-family: 'Georgia', serif; /* elegant, restaurant feel */
+}
 /* Navbar container */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #2c3e50;
+  background-color: #5b1616;
   padding: 15px 30px;
 }
- 
-/* Logo text */
+
 .logo {
   color: white;
-  font-size: 22px;
+  font-size: 19px;
   font-weight: bold;
+  cursor: pointer; /* makes it feel clickable */
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  color: #f39c12;
+  transform: scale(1.2);
 }
  
 /* Nav links */
@@ -34,14 +44,20 @@
 .nav-links a {
   text-decoration: none;
   color: white;
-  font-size: 16px;
-  transition: color 0.3s;
+  font-size: 16px;     /* match logo size */
+  font-weight: bold;   /* match logo weight */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;  /* THIS is the magic fix */
 }
- 
+
 .nav-links a:hover {
-  color: #f39c12; /* Highlight on hover */
+  color: #f39c12;
+  transform: scale(1.2);
 }
- 
+
+
+
 /* Content styling */
 .content {
   padding: 50px;
@@ -54,19 +70,41 @@
   flex-wrap: wrap; /* makes it responsive */
   gap: 20px; /* adds spacing between cards */
   padding: 20px;
+  color: #f9f6f0
 }
 
 .card-img-top {
   height: 180px; /* or whatever fixed height you want */
   object-fit: cover; /* this crops/zooms the image to fill the space nicely */
 }
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.05); /* zoom a little */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4); /* glow/shadow */
+}
+.cuisine-title {
+  color: #5b1616; /* warm cream highlight */
+  text-align: center;
+}
 .cuisine-description {
-  border-left: 5px solid #f39c12;  /* vertical colored bar on the left */
-  background-color: #fff8e1;        /* soft light background for the box */
-  padding: 15px 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;               /* rounded corners */
-  font-style: italic;                /* optional: adds elegance */
-  line-height: 1.6;
-  color: #2c3e50;
+  color: #f9f6f0;
+  background-color: #5a4238; /* lighter warm brown */
+  padding: 20px;
+  margin: 40px 0;
+  border-top: 2px solid #a1866f;  /* thin elegant border */
+  border-bottom: 2px solid #a1866f;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4); /* dim light shadow */
+}
+.cuisine-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.cuisine-section.show {
+  opacity: 1;
+  transform: translateY(0);
 }
