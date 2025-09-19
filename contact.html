@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+      <nav class="navbar">
+        <div class="logo">Tasty Tales </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="Recipes.html">Recipes</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- Contact Form Section -->
+  <section class="contact-section">
+    <div class="container">
+      <h2 class="text-center mb-4">Choose the recipe of your dream </h2>
+      <p class="text-center mb-5">
+        Choose your favorite cuisine and book your dining experience with us.  
+        We’ll confirm your reservation shortly.
+      </p>
+
+      <form class="contact-form">
+        <div class="row">
+          <!-- Name -->
+          <div class="col-md-6 mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+          </div>
+          <!-- Email -->
+          <div class="col-md-6 mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- Phone -->
+          <div class="col-md-6 mb-3">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" id="phone" class="form-control" placeholder="+355 68 123 4567">
+          </div>
+          <!-- Guests -->
+          <div class="col-md-6 mb-3">
+            <label for="guests" class="form-label">Number of Guests</label>
+            <input type="number" id="guests" class="form-control" min="1" max="20" placeholder="e.g. 4">
+          </div>
+        </div>
+
+        <!-- Cuisine Choice -->
+        <div class="mb-3">
+          <label for="cuisine" class="form-label">Choose Cuisine</label>
+          <select id="cuisine" class="form-select" required>
+            <option value="">-- Select a cuisine --</option>
+            <option value="french">French</option>
+            <option value="italian">Italian</option>
+            <option value="japanese">Japanese</option>
+            <option value="chinese">Chinese</option>
+            <option value="indian">Indian</option>
+            <option value="thai">Thai</option>
+            <option value="mediterranean">Mediterranean</option>
+            <option value="middle eastern">Middle Eastern</option>
+            <option value="korean">Korean</option>
+          </select>
+        </div>
+
+        <!-- Date -->
+        <div class="mb-3">
+          <label for="date" class="form-label">Reservation Date</label>
+          <input type="date" id="date" class="form-control" required>
+        </div>
+
+        <!-- Message -->
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" rows="4" class="form-control" placeholder="Special requests, allergies, etc..."></textarea>
+        </div>
+
+        <!-- Submit -->
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Book Now</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+</body>
+</html>

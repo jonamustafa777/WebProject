@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
  body {
   background-color: #f9f6f0; /* dark chocolate brown */
   color: #c97d43; /* soft beige text for readability */
@@ -15,6 +18,10 @@
   align-items: center;
   background-color: #5b1616;
   padding: 15px 30px;
+  position: fixed;   /* stays in place */
+  top: 0;            /* sticks to top */
+  width: 100%;       /* full width */
+  z-index: 1000;  
 }
 
 .logo {

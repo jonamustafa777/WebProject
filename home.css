@@ -91,14 +91,15 @@ body{
 
 .cuisine-images {
   display: flex;
-  flex-wrap: wrap;
-  gap: 15px; /* space between images */
   justify-content: center;
+  gap: 20px; /* space between images */
+  flex-wrap: wrap;
 }
 
 .cuisine-images img {
-  width: 45%;
-  max-width: 200px;
+  width: 180px;
+  height: 150px;
+  object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -108,6 +109,10 @@ body{
   transform: scale(1.1); /* grows 10% bigger */
   box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* stronger shadow */
 }
+.cuisine-images a {
+  display: inline-block;   /* makes link behave like a box */
+}
+
 .intro-section {
   padding: 60px 20px;
   background-color: #fff; /* white background to contrast slider */
@@ -125,4 +130,27 @@ body{
   color: #444;
   max-width: 800px;
   margin: 0 auto; /* centers text */
+}
+.write-us {
+  background: #f8f8f8;
+  padding: 40px 20px;
+  margin-top: 60px;
+  border-top: 2px solid #eee;
+}
+
+.write-us h3 {
+  font-size: 20px;
+  color: #333;
+}
+
+.write-us a {
+  color: #800000;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.write-us a:hover {
+  color: #b30000;
+  text-decoration: underline;
 }
