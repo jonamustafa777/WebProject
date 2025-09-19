@@ -17,6 +17,10 @@ body{
   left: 0;
   width: 100%;
   z-index: 10;
+  position: fixed;   /* stays in place */
+  top: 0;            /* sticks to top */
+  width: 100%;       /* full width */
+  z-index: 1000;  
 }
 .logo {
   color: white;
@@ -93,8 +97,32 @@ body{
 }
 
 .cuisine-images img {
-  width: 45%; /* each image takes about half the column */
-  max-width: 200px; /* they won’t get too big */
+  width: 45%;
+  max-width: 200px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.cuisine-images img:hover {
+  transform: scale(1.1); /* grows 10% bigger */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* stronger shadow */
+}
+.intro-section {
+  padding: 60px 20px;
+  background-color: #fff; /* white background to contrast slider */
+}
+
+.intro-title {
+  font-size: 2.5rem;
+  color: #5b1616;
+  margin-bottom: 20px;
+}
+
+.intro-description {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #444;
+  max-width: 800px;
+  margin: 0 auto; /* centers text */
 }
