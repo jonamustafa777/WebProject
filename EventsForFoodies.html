@@ -18,11 +18,30 @@
         <li><a href="contact.html">Contact Us</a></li>
     </ul>
 </nav>
+</br>
+</br>
+</br>
+</br>
 
 <section class="events-section">
   <h2 class="section-title">The Biggest Food Events In The World</h2>
   <p class="section-desc">Discover upcoming food festivals, cultural celebrations, and special events that bring people together through cuisine and tradition.</p>
 
+</br>
+</br>
+  <select id="filter">
+  <option value="all">Show All</option>
+  <option value="Germany">Germany</option>
+  <option value="Italy">Italy</option>
+  <option value="Spain">Spain</option>
+  <option value="Ireland">Ireland</option>
+  <option value="Switzerland">Switzerland</option>
+  <option value="USA">USA</option>
+  </select>
+ </br>
+</br>
+</br>
+</br>
   <div class="event-item-wrapper">
   <div class="event-item">
     <img src="images/oktoberfest.png" alt="Oktoberfest" class="event-img">
@@ -103,5 +122,26 @@
 
 </section>
 
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 Tasty Tales. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("filter").addEventListener("change", e => {
+  const value = e.target.value;
+  document.querySelectorAll(".event-item").forEach(item => {
+    item.style.display = value === "all" || item.textContent.includes(value) 
+      ? "block" 
+      : "none";
+  });
+});
+
+
+
+
+</script>
 </body>
 </html>

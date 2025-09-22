@@ -9,7 +9,16 @@
     color: #333;
     padding-bottom: 50px;
 }
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
 
+.content {
+  flex: 1;  /* pushes footer to bottom */
+}
 /* Navbar container */
 .navbar {
   display: flex;
@@ -17,6 +26,15 @@
   align-items: center;
   background-color: #5b1616;
   padding: 15px 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  position: fixed;   /* stays in place */
+  top: 0;            /* sticks to top */
+  width: 100%;       /* full width */
+  z-index: 1000;  
 }
 
 .logo {
@@ -63,6 +81,7 @@
   border-radius: 12px;
   margin: 40px 0;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  
 }
 
 .section-title {
@@ -145,4 +164,17 @@ background-color: #fdf1e3;
     width: 50%;
   padding: 30px; 
   }
+}
+
+.footer {
+  background-color: #5b1616;
+  padding: 15px 0;
+  color: white;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer p {
+  font-size: 14px;
+  margin: 0;
 }

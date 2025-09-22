@@ -6,6 +6,17 @@
 html {
   scroll-behavior: smooth;
 }
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;  /* pushes footer to bottom */
+}
+
  body {
   background-color: #f9f4ea; /* dark chocolate brown */
   color: #c97d43; /* soft beige text for readability */
@@ -114,4 +125,16 @@ html {
 .cuisine-section.show {
   opacity: 1;
   transform: translateY(0);
+}
+.footer {
+  background-color: #5b1616;
+  padding: 20px 0;
+  color: white;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer p {
+  font-size: 14px;
+  margin: 0;
 }

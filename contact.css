@@ -140,6 +140,18 @@ body {
   transform: translateY(-3px);
   background: linear-gradient(135deg, #a31a1a, #770808);
 }
+.footer {
+  background-color: #5b1616;
+  padding: 20px 0;
+  color: white;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer p {
+  font-size: 14px;
+  margin: 0;
+}
 
 /* Animation */
 @keyframes fadeIn {
