@@ -154,3 +154,39 @@ body{
   color: #b30000;
   text-decoration: underline;
 }
+/* Footer */
+.footer {
+  background-color: #5b1616;
+  padding: 20px 0;
+  color: white;
+  text-align: center;
+  margin-top: 0;
+}
+
+.footer p {
+  font-size: 14px;
+  margin: 0;
+}
+.cuisine-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.cuisine-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cuisine-left {
+  transform: translateX(-100px);
+}
+
+.cuisine-right {
+  transform: translateX(100px);
+}
+
+.cuisine-section.show.cuisine-left,
+.cuisine-section.show.cuisine-right {
+  transform: translateX(0);
+}
