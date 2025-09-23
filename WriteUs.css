@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+ font-family: 'Georgia', serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ffe5e5, #fff5f5);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+  
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5b1616;
+  padding: 15px 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  position: fixed;   /* stays in place */
+  top: 0;            /* sticks to top */
+  width: 100%;       /* full width */
+  z-index: 1000;  
+}
+.logo {
+  color: white;
+  font-size: 19px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.logo:hover {
+  color: #f39c12;
+  transform: scale(1.2);
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;  
+}
+.nav-links a:hover {
+  color: #f39c12;
+  transform: scale(1.2);
+}
+.expand-container {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 420px;
+}
+
+.expand-container {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.expand-container h2 {
+  margin-bottom: 5px;
+  color: #5b1616;
+  text-align: center;
+}
+
+.expand-container p {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.form-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input, textarea, select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.invalid {
+  border-color: red;
+}
+
+button {
+  padding: 12px;
+  background-color: #5b1616;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #7a1c1c;
+}
+
+.success {
+  margin-top: 10px;
+  color: green;
+  text-align: center;
+  font-weight: bold;
+}
+.footer {
+  background-color: #5b1616;
+  padding: 20px 0;
+  color: white;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer p {
+  font-size: 14px;
+  margin: 0;
+}
