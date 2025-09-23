@@ -199,3 +199,57 @@ input.invalid, select.invalid, textarea.invalid {
 .message.error {
   color: red;
 }
+/* Tablets & Mobile */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 30px 20px;
+  }
+
+  .contact-section h2 {
+    font-size: 28px;
+  }
+
+  .contact-section p {
+    font-size: 15px;
+    max-width: 90%;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .contact-form {
+    padding: 20px 15px;
+  }
+
+  .contact-section h2 {
+    font-size: 24px;
+  }
+
+  .contact-section p {
+    font-size: 14px;
+  }
+
+  .contact-form button {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    padding: 10px 15px;
+  }
+
+  .logo {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+}
