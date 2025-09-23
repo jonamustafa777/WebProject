@@ -30,12 +30,14 @@
           <!-- Name -->
           <div class="col-md-6 mb-3">
             <label for="name" class="form-label">Full Name</label>
-            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+            <input type="text" id="name" class="form-control" placeholder="Enter your name" >
+             <div class="error-message"></div>
           </div>
           <!-- Email -->
           <div class="col-md-6 mb-3">
             <label for="email" class="form-label">Email Address</label>
-            <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+            <input type="email" id="email" class="form-control" placeholder="Enter your email" >
+            <div class="error-message"></div>
           </div>
         </div>
 
@@ -44,11 +46,13 @@
           <div class="col-md-6 mb-3">
             <label for="phone" class="form-label">Phone Number</label>
             <input type="tel" id="phone" class="form-control" placeholder="+355 68 123 456">
+            <div class="error-message"></div>
           </div>
           <!-- Name of Recipes -->
           <div class="col-md-6 mb-3">
             <label for="name" class="form-label">Name of Recipe</label>
             <input type="text" id="" class="form-control"  placeholder="Write your favorite recipe">
+            <div class="error-message"></div>
           </div>
         </div>
 
@@ -66,6 +70,7 @@
             <option value="mediterranean">Mediterranean</option>
             <option value="middle eastern">Middle Eastern</option>
             <option value="korean">Korean</option>
+            <div class="error-message"></div>
           </select>
         </div>
 
@@ -78,6 +83,7 @@
         <!-- Submit -->
         <div class="text-center">
           <button type="submit" class="btn btn-primary">Book Now</button>
+            <p id="formMessage" class="message"></p>
         </div>
       </form>
     </div>
@@ -90,6 +96,6 @@
   </div>
 </footer>
 
-
+<script src="contact.js"></script>
 </body>
 </html>
