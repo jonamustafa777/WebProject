@@ -1,45 +1,45 @@
+/* Reset & base styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 html, body {
   height: 100%;
-  margin: 0;
   display: flex;
   flex-direction: column;
+  margin: 0;
 }
 
-.content {
-  flex: 1;  /* pushes footer to bottom */
+body {
+  background-color: #f9f4ea; /* soft chocolate background */
+  color: #c97d43;            /* soft beige text */
+  font-family: 'Georgia', serif;
 }
 
- body {
-  background-color: #f9f4ea; /* dark chocolate brown */
-  color: #c97d43; /* soft beige text for readability */
-  font-family: 'Georgia', serif; /* elegant, restaurant feel */
-}
-/* Navbar container */
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #5b1616;
   padding: 15px 30px;
-  position: fixed;   /* stays in place */
-  top: 0;            /* sticks to top */
-  width: 100%;       /* full width */
-  z-index: 1000;  
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .logo {
   color: white;
   font-size: 19px;
   font-weight: bold;
-  cursor: pointer; /* makes it feel clickable */
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 
@@ -47,26 +47,26 @@ html, body {
   color: #f39c12;
   transform: scale(1.2);
 }
- 
-/* Nav links */
+
+/* Navigation links */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
 }
- 
+
 .nav-links li {
   display: inline;
 }
- 
+
 .nav-links a {
   text-decoration: none;
   color: white;
-  font-size: 16px;     /* match logo size */
-  font-weight: bold;   /* match logo weight */
+  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
-  display: inline-block;  /* THIS is the magic fix */
+  display: inline-block;
 }
 
 .nav-links a:hover {
@@ -74,58 +74,75 @@ html, body {
   transform: scale(1.2);
 }
 
-
-
-/* Content styling */
+/* Main content */
 .content {
+  flex: 1; /* pushes footer to bottom */
   padding: 50px;
   text-align: center;
 }
 
+/* Card container & cards */
 .card-container {
   display: flex;
-  justify-content: space-around; /* or space-between / center */
-  flex-wrap: wrap; /* makes it responsive */
-  gap: 20px; /* adds spacing between cards */
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
   padding: 20px;
-  color: #f9f6f0
+  color: #f9f6f0;
 }
 
-.card-img-top {
-  height: 180px; /* or whatever fixed height you want */
-  object-fit: cover; /* this crops/zooms the image to fill the space nicely */
-}
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .card:hover {
-  transform: scale(1.05); /* zoom a little */
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4); /* glow/shadow */
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
+
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Cuisine sections */
 .cuisine-title {
-  color: #5b1616; /* warm cream highlight */
+  color: #5b1616;
   text-align: center;
 }
+
 .cuisine-description {
-  color: #f9f6f0;
-  background-color: #5a4238; /* lighter warm brown */
-  padding: 20px;
-  margin: 40px 0;
-  border-top: 2px solid #a1866f;  /* thin elegant border */
-  border-bottom: 2px solid #a1866f;
-  border-radius: 6px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.4); /* dim light shadow */
+max-width: 700px;
+  margin: 40px auto;  /* keeps it centered inside the section */
+  padding: 30px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #5b1616;
+  font-size: 18px;
+  line-height: 1.8;
+  border-left: 4px solid #c97d43;
+  text-align: left;
 }
+
+
+.cuisine-description:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+
 .cuisine-section {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.8s ease, transform 0.8s ease;
+  margin: 80px 0;
 }
 
 .cuisine-section.show {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Footer */
 .footer {
   background-color: #5b1616;
   padding: 20px 0;
@@ -137,4 +154,19 @@ html, body {
 .footer p {
   font-size: 14px;
   margin: 0;
+}
+
+/* Buttons */
+.toggle-btn {
+  background-color: #5b1616;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.toggle-btn:hover {
+  background-color: #c0392b;
 }
