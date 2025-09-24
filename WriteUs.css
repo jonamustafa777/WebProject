@@ -217,27 +217,24 @@ textarea {
 
 
 
-/* Responsive */
-@media (max-width: 768px) {
-  .expand-container {
-    padding: 30px 20px;
-    margin: 100px auto 40px;
-  }
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-
-@media (max-width: 480px) {
-  .expand-container {
-    padding: 20px 15px;
-    margin: 80px auto 30px;
-  }
-}
-
-
 
 /* Responsive tweaks */
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
   .expand-container {
-    margin: 20px;
-    padding: 20px;
+    max-width: 550px;
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .expand-container {
+    margin: 100px auto 40px;
+    padding: 25px 15px;
   }
 }
