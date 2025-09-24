@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
       this.reset(); // reset form fields
       [nameInput, emailInput, phoneInput, recipeInput, cuisineSelect].forEach(el => el.classList.remove("valid", "invalid"));
 
-      formMessage.textContent = "✅ Your booking was successful!";
+      formMessage.textContent = "✅ Your suggestion was successful!";
       formMessage.className = "message success";
       formMessage.style.display = "block";
     } else {
