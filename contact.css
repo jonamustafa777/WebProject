@@ -57,7 +57,34 @@ body {
   color: #f39c12;
   transform: scale(1.2);
 }
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
 
+/* Mobile styles */
+@media screen and (max-width: 770px) {
+  .nav-links {
+    display: none;            /* hide links */
+    flex-direction: column;   /* stack them */
+    position: absolute;
+    top: 60px;                /* below navbar */
+    right: 0;
+    width: 100%;
+    background-color: #5b1616; /* match your navbar color */
+    padding: 10px 0;
+  }
+  .hamburger {
+    display: block; /* show hamburger on small screens */
+  }
+}
+.nav-links.show {
+    display: flex;            /* show links when toggled */
+  }
 /* Contact Section */
 .contact-section {
   padding: 120px 20px 60px; /* space from top (because navbar is fixed) */

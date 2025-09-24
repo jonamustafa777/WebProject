@@ -18,6 +18,7 @@
             <li><a href="EventsForFoodies.html">Events For Foodies</a></li>
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
     </nav>
 
 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -320,6 +321,9 @@
   });
 });
 
+ function toggleMenu() {
+  document.querySelector(".nav-links").classList.toggle("show");
+}
 </script>
 </body>
 </html>

@@ -41,3 +41,7 @@ document.getElementById("expandForm").addEventListener("submit", function(e) {
       document.getElementById("expandForm").reset();
     }
   });
+
+   function toggleMenu() {
+  document.querySelector(".nav-links").classList.toggle("show");
+}

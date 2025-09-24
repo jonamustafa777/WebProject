@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Georgia, serif !important;
 }
 
 html {
@@ -73,7 +74,34 @@ body {
   color: #f39c12;
   transform: scale(1.2);
 }
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
 
+/* Mobile styles */
+@media screen and (max-width: 630px) {
+  .nav-links {
+    display: none;            /* hide links */
+    flex-direction: column;   /* stack them */
+    position: absolute;
+    top: 60px;                /* below navbar */
+    right: 0;
+    width: 100%;
+    background-color: #5b1616; /* match your navbar color */
+    padding: 10px 0;
+  }
+  .hamburger {
+    display: block; /* show hamburger on small screens */
+  }
+}
+.nav-links.show {
+    display: flex;            /* show links when toggled */
+  }
 /* Main content */
 .content {
   flex: 1; /* pushes footer to bottom */
@@ -83,6 +111,7 @@ body {
 
 /* Card container & cards */
 .card-container {
+  font-family: Georgia, serif !important;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -97,7 +126,7 @@ body {
 
 .card:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.4);
 }
 
 .card-img-top {
@@ -109,6 +138,7 @@ body {
 .cuisine-title {
   color: #5b1616;
   text-align: center;
+  font-family: Georgia, serif !important;
 }
 
 .cuisine-description {
@@ -121,6 +151,7 @@ max-width: 700px;
   line-height: 1.8;
   border-left: 4px solid #c97d43;
   text-align: left;
+  font-family: Georgia, serif !important;
 }
 
 

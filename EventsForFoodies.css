@@ -57,6 +57,8 @@ html, body {
 
 .nav-links li {
   display: inline;
+  text-align: center;
+  padding: 10px 0;
 }
 
 .nav-links a {
@@ -74,6 +76,34 @@ html, body {
   transform: scale(1.2);
 }
 
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 630px) {
+  .nav-links {
+    display: none;            /* hide links */
+    flex-direction: column;   /* stack them */
+    position: absolute;
+    top: 60px;                /* below navbar */
+    right: 0;
+    width: 100%;
+    background-color: #5b1616; /* match your navbar color */
+    padding: 10px 0;
+  }
+  .hamburger {
+    display: block; /* show hamburger on small screens */
+  }
+}
+.nav-links.show {
+    display: flex;            /* show links when toggled */
+  }
 /* Events section */
 .events-section {
   padding: 100px 40px 40px;
@@ -84,16 +114,18 @@ html, body {
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
   margin-bottom: 15px;
   color: #c97d43;
+  text-align: center;
 }
 
 .section-desc {
   font-size: 1rem;
   margin-bottom: 30px;
   color: #444;
+  text-align: center;
 }
 
 /* Each event */
@@ -146,17 +178,47 @@ html, body {
   font-size: 1rem;
   color: #444;
 }
+.filter-container {
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    align-items: center;     /* centers vertically */
+    text-align: center;
+}
+#filter {
+    background-color: #b71c1c; /* deep red */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: Georgia, serif;
+    margin-left: -800px;
+}
+
+/* Hover effect */
+#filter:hover {
+    background-color: #e53935; /* lighter red on hover */
+    transform: scale(1.05); /* subtle pop effect */
+}
+
+/* Optional: dropdown arrow color */
+#filter option {
+    color: black;
+    background-color: white;
+}
 
 /* Footer */
 .footer {
   background-color: #5b1616;
-  padding: 15px 0;
+  padding: 10px 0;
   color: white;
   text-align: center;
   margin-top: auto;
 }
 
 .footer p {
-  font-size: 14px;
+  font-size: 10px;
   margin: 0;
 }
